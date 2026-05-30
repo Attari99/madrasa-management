@@ -60,7 +60,6 @@ export interface UstadAttendance { id: string; ustadId: string; date: string; st
 export interface MonthlyProgress { id: string; studentId: string; month: number; year: number; currentSipara: string; monthlyLesson: string; revisionStatus: string; memorizationProgress: string; performance: "excellent" | "good" | "weak" | "needs_attention"; behaviour: "good" | "normal" | "naughty"; }
 export interface Notification { id: string; message: string; recipient: string; sentAt: string; sentBy: string; }
 export interface UstadTarget { id: string; ustadId: string; month: number; year: number; targetSiparas: number; completedSiparas: number; status: "pending" | "completed" | "partial"; }
-// Add this interface after UstadTarget
 export interface TargetReport {
   id: string;
   ustadId: string;

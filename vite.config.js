@@ -4,13 +4,10 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/madrasa-management/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
-  },
-  server: {
-    port: 5173,
-    host: true,
   },
 });

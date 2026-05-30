@@ -16,7 +16,7 @@ import StudentProfile from "./pages/students/StudentProfile";
 import AttendancePage from "./pages/attendance/AttendancePage";
 import ClassList from "./pages/classes/ClassList";
 import MonthlyProgress from "./pages/monthly-progress/MonthlyProgress";
-import Reports from "../reports/Reports";
+// import Reports from "./pages/reports/Reports";
 import Notifications from "./pages/notifications/Notifications";
 import Settings from "./pages/settings/Settings";
 import UstadDashboard from "./pages/ustad/UstadDashboard";
@@ -28,6 +28,7 @@ import UstadProfilePage from "./pages/ustad/UstadProfilePage";
 import NotFound from "./pages/not-found";
 import TargetReports from "./pages/admin/TargetReports";
 import UstadTargetReport from "./pages/ustad/UstadTargetReport";
+
 function AdminRoutes() {
   return (
     <Switch>
@@ -46,7 +47,7 @@ function AdminRoutes() {
       <Route path="/attendance-history" component={AttendanceHistory} />
       <Route path="/classes" component={ClassList} />
       <Route path="/monthly-progress" component={MonthlyProgress} />
-      <Route path="/reports" component={Reports} />
+      {/* <Route path="/reports" component={Reports} /> */}
       <Route path="/notifications" component={Notifications} />
       <Route path="/settings" component={Settings} />
       <Route path="/admin-profile" component={AdminProfile} />

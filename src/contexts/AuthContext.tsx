@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { storage } from "@/utils/storage";
+import { storage } from '../utils/storage';
 import type { User } from "@/utils/storage";
 
 interface AuthContextType {
