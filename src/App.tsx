@@ -16,7 +16,7 @@ import StudentProfile from "./pages/students/StudentProfile";
 import AttendancePage from "./pages/attendance/AttendancePage";
 import ClassList from "./pages/classes/ClassList";
 import MonthlyProgress from "./pages/monthly-progress/MonthlyProgress";
-// import Reports from "./pages/reports/Reports";
+import Reports from "./pages/reports/Reports";
 import Notifications from "./pages/notifications/Notifications";
 import Settings from "./pages/settings/Settings";
 import UstadDashboard from "./pages/ustad/UstadDashboard";
@@ -37,17 +37,20 @@ function AdminRoutes() {
       <Route path="/ustads" component={UstadList} />
       <Route path="/ustads/new" component={() => <UstadForm />} />
       <Route path="/ustads/:id/edit">{(params) => params && <UstadForm id={params.id} />}</Route>
-      <Route path="/ustads/:id" component={UstadProfile} />
+      <Route path="/ustads/:id">{(params) => params && <UstadProfile id={params.id} />}</Route>
       <Route path="/students" component={StudentList} />
       <Route path="/students/new" component={() => <StudentForm />} />
       <Route path="/students/:id/edit">{(params) => params && <StudentForm id={params.id} />}</Route>
-      <Route path="/students/:id" component={StudentProfile} />
+      <Route path="/students/:id">{(params) => {
+        if (!params || !params.id) return <NotFound />;
+        return <StudentProfile id={params.id} />;
+      }}</Route>
       <Route path="/target-reports" component={TargetReports} />
       <Route path="/attendance" component={AttendancePage} />
       <Route path="/attendance-history" component={AttendanceHistory} />
       <Route path="/classes" component={ClassList} />
       <Route path="/monthly-progress" component={MonthlyProgress} />
-      {/* <Route path="/reports" component={Reports} /> */}
+      <Route path="/reports" component={Reports} />
       <Route path="/notifications" component={Notifications} />
       <Route path="/settings" component={Settings} />
       <Route path="/admin-profile" component={AdminProfile} />
