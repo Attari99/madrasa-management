@@ -16,7 +16,7 @@ import StudentProfile from "./pages/students/StudentProfile";
 import AttendancePage from "./pages/attendance/AttendancePage";
 import ClassList from "./pages/classes/ClassList";
 import MonthlyProgress from "./pages/monthly-progress/MonthlyProgress";
-import Reports from "./pages/reports/Reports";
+import Reports from "../reports/Reports";
 import Notifications from "./pages/notifications/Notifications";
 import Settings from "./pages/settings/Settings";
 import UstadDashboard from "./pages/ustad/UstadDashboard";
